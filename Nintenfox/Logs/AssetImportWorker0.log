@@ -15,11 +15,11 @@ C:/Users/jdiaz/Unity/Repos/nintenfox/Nintenfox
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51690
+56764
 Successfully changed project path to: C:/Users/jdiaz/Unity/Repos/nintenfox/Nintenfox
 C:/Users/jdiaz/Unity/Repos/nintenfox/Nintenfox
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 43.38 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 42.17 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.17f1 (a4537701e4ab)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -35,37 +35,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56572
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56844
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002994 seconds.
+Registered in 0.002378 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 35.90 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 36.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.399 seconds
+- Completed reload, in  1.422 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1399ms)
-		BeginReloadAssembly (87ms)
+	ReloadAssembly (1423ms)
+		BeginReloadAssembly (66ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (497ms)
-			LoadAssemblies (84ms)
+		EndReloadAssembly (500ms)
+			LoadAssemblies (63ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (189ms)
+			SetupTypeCache (175ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (181ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (198ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (36ms)
-				BeforeProcessingInitializeOnLoad (19ms)
-				ProcessInitializeOnLoadAttributes (89ms)
+				BeforeProcessingInitializeOnLoad (20ms)
+				ProcessInitializeOnLoadAttributes (103ms)
 				ProcessInitializeOnLoadMethodAttributes (33ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -73,51 +73,51 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005696 seconds.
+Registered in 0.005111 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.403 seconds
+- Completed reload, in  1.736 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1404ms)
-		BeginReloadAssembly (176ms)
+	ReloadAssembly (1737ms)
+		BeginReloadAssembly (364ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (1142ms)
-			LoadAssemblies (114ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (1278ms)
+			LoadAssemblies (129ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (361ms)
+			SetupTypeCache (454ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (463ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (546ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (98ms)
-				ProcessInitializeOnLoadAttributes (345ms)
-				ProcessInitializeOnLoadMethodAttributes (5ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (425ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
-Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1399 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 65.0 MB.
 System memory in use after: 65.0 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1833.
-Total: 3.076000 ms (FindLiveObjects: 0.164000 ms CreateObjectMapping: 0.052100 ms MarkObjects: 2.784800 ms  DeleteObjects: 0.073900 ms)
+Total: 3.528300 ms (FindLiveObjects: 0.184300 ms CreateObjectMapping: 0.046800 ms MarkObjects: 3.186200 ms  DeleteObjects: 0.110100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -130,24 +130,234 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.53 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 37.2 MB.
-System memory in use after: 37.3 MB.
+Received Import Request.
+  path: Assets/untitled.fbx
+  artifactKey: Guid(75237816d0beec34a97336c8970179b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/untitled.fbx using Guid(75237816d0beec34a97336c8970179b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9d7a5c59ed836f915b58fd249855940') in 0.315605 seconds 
+  Import took 0.319288 seconds .
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1833.
-Total: 3.165600 ms (FindLiveObjects: 0.217700 ms CreateObjectMapping: 0.068500 ms MarkObjects: 2.859500 ms  DeleteObjects: 0.018900 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 13.937538 seconds.
+  path: Assets/Fox/Animations/Fox_Walk_Right_InPlace.fbx
+  artifactKey: Guid(bdbaf568193ceb44eb952bb2af5f3837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Walk_Right_InPlace.fbx using Guid(bdbaf568193ceb44eb952bb2af5f3837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b21f09ee077c2a5b2ca456da17f087a2') in 0.146676 seconds 
+  Import took 0.151532 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009623 seconds.
+  path: Assets/Fox/Animations/Fox_Walk_Right_InPlace.fbx
+  artifactKey: Guid(bdbaf568193ceb44eb952bb2af5f3837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Walk_Right_InPlace.fbx using Guid(bdbaf568193ceb44eb952bb2af5f3837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b21f09ee077c2a5b2ca456da17f087a2') in 0.072766 seconds 
+  Import took 0.080441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.905765 seconds.
+  path: Assets/Fox/Animations/Fox_Somersault_InPlace.fbx
+  artifactKey: Guid(0473e26d90c4a994ead38f256c99c5b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Somersault_InPlace.fbx using Guid(0473e26d90c4a994ead38f256c99c5b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8991d3ac24af7580295ab54ef2dc6b92') in 0.056133 seconds 
+  Import took 0.060585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.327564 seconds.
+  path: Assets/Fox/Animations/Fox_Somersault.fbx
+  artifactKey: Guid(ce33bd1fdecb0de4dba1419f7763a5b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Somersault.fbx using Guid(ce33bd1fdecb0de4dba1419f7763a5b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f4bc3ab5f20b82eab1d0e1a9e3cf79') in 0.049119 seconds 
+  Import took 0.053885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Fox/Animations/Fox_Sit_No.fbx
+  artifactKey: Guid(13236cf41befc77498c6245c317911ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Sit_No.fbx using Guid(13236cf41befc77498c6245c317911ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aac9d695ed0ff94d4d8f528b9df499d') in 0.067296 seconds 
+  Import took 0.071064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/Fox/Animations/Fox_Sit_Yes.fbx
+  artifactKey: Guid(e73c2dbc3de029f41bbdd4fd33d9fef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Sit_Yes.fbx using Guid(e73c2dbc3de029f41bbdd4fd33d9fef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d9865fd73937a8d3906ff2a8310e343') in 0.065901 seconds 
+  Import took 0.070467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Fox/Animations/Fox_Sit_Idle_Break.fbx
+  artifactKey: Guid(d606362d2cd19554aaf474b16d557924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Sit_Idle_Break.fbx using Guid(d606362d2cd19554aaf474b16d557924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5734553cd5e1a1a0767a9912cba3a7b') in 0.495524 seconds 
+  Import took 0.501422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 106.964923 seconds.
+  path: Assets/Fox/Animations/Fox_Sit3_StandUp.fbx
+  artifactKey: Guid(02d99976b4a0880419ef0381cb525dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Sit3_StandUp.fbx using Guid(02d99976b4a0880419ef0381cb525dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8df0d9138aa94bb7b3ebbe03ba2bd424') in 0.052904 seconds 
+  Import took 0.057270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.229632 seconds.
+  path: Assets/Fox/Animations/Fox_Sit2_Idle.fbx
+  artifactKey: Guid(a2e546d7d9c06c5438e2982ef4737ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Sit2_Idle.fbx using Guid(a2e546d7d9c06c5438e2982ef4737ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aded7e7457071d26add390dfd0454e97') in 0.056858 seconds 
+  Import took 0.061722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Fox/Animations/Fox_Run_Left_InPlace.fbx
+  artifactKey: Guid(ba2500356de6e014d9477dc115771f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Run_Left_InPlace.fbx using Guid(ba2500356de6e014d9477dc115771f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ae4def93f31409296fe76cb06728886') in 0.063452 seconds 
+  Import took 0.068701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Fox/Animations/Fox_Sit2_Idle.fbx
+  artifactKey: Guid(a2e546d7d9c06c5438e2982ef4737ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Sit2_Idle.fbx using Guid(a2e546d7d9c06c5438e2982ef4737ce3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aded7e7457071d26add390dfd0454e97') in 0.054468 seconds 
+  Import took 0.059831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000537 seconds.
+  path: Assets/Fox/Animations/Fox_Run_Right_InPlace.fbx
+  artifactKey: Guid(490c9560e31fae748af6de79fbaecb10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Run_Right_InPlace.fbx using Guid(490c9560e31fae748af6de79fbaecb10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5472d9974bf840199fb8d8faac0ed178') in 0.057964 seconds 
+  Import took 0.065454 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Fox/Animations/Fox_Run_InPlace.fbx
+  artifactKey: Guid(93da703632b047d43b8f3a2b0f902424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Run_InPlace.fbx using Guid(93da703632b047d43b8f3a2b0f902424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edb617d86528f901da3d4b29dae24ae8') in 0.060502 seconds 
+  Import took 0.065047 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Fox/Animations/Fox_Run_Right.fbx
+  artifactKey: Guid(cc3accffe68d76c4fba0db9dc9cf4a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Run_Right.fbx using Guid(cc3accffe68d76c4fba0db9dc9cf4a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1dda0f4ec5ccca6fc75af5b8659ab1f') in 0.063216 seconds 
+  Import took 0.066620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Fox/Animations/Fox_Run_Left.fbx
+  artifactKey: Guid(5ae8ff9eadf8f554688979fee65f0aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Run_Left.fbx using Guid(5ae8ff9eadf8f554688979fee65f0aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57c5ecef1d5666d799c78f4040f5ad5c') in 0.060821 seconds 
+  Import took 0.065710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Fox/Animations/Fox_Run_Right.fbx
+  artifactKey: Guid(cc3accffe68d76c4fba0db9dc9cf4a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Run_Right.fbx using Guid(cc3accffe68d76c4fba0db9dc9cf4a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1dda0f4ec5ccca6fc75af5b8659ab1f') in 0.045875 seconds 
+  Import took 0.049630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/Fox/Animations/Fox_Run.fbx
+  artifactKey: Guid(70c4ef9204c08ce429fd08a494bb1033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Run.fbx using Guid(70c4ef9204c08ce429fd08a494bb1033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7aa15d85bd54f942196da48f1fcbf6a') in 0.060138 seconds 
+  Import took 0.067706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Fox/Animations/Fox_Jump_Pivot_InPlace.fbx
+  artifactKey: Guid(2d694cd30f631174093a1111c4ed8895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Jump_Pivot_InPlace.fbx using Guid(2d694cd30f631174093a1111c4ed8895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fcbecba197ceeb52fe6a805aa4b6fe9') in 0.062214 seconds 
+  Import took 0.067581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000737 seconds.
+  path: Assets/Fox/Animations/Fox_Run_Left.fbx
+  artifactKey: Guid(5ae8ff9eadf8f554688979fee65f0aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Run_Left.fbx using Guid(5ae8ff9eadf8f554688979fee65f0aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57c5ecef1d5666d799c78f4040f5ad5c') in 0.042542 seconds 
+  Import took 0.048166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.221015 seconds.
+  path: Assets/Fox/Animations/Fox_Jump_InAir.fbx
+  artifactKey: Guid(e004cd5a03acf764d911027f6ca2b528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Jump_InAir.fbx using Guid(e004cd5a03acf764d911027f6ca2b528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed9daa98ca31d30bc9e331548b9f327') in 0.048868 seconds 
+  Import took 0.053821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Fox/Animations/Fox_Jump.fbx
+  artifactKey: Guid(8ca578f25a346e248800bad0f5224350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Jump.fbx using Guid(8ca578f25a346e248800bad0f5224350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fc667abfe8b4e8ac5684ed9d63d85f8') in 0.067057 seconds 
+  Import took 0.071040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/Fox/Animations/Fox_Attack_Tail.fbx
+  artifactKey: Guid(b19a75272a0f3534fb0ab2cc67456a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Attack_Tail.fbx using Guid(b19a75272a0f3534fb0ab2cc67456a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92df9b61be006f617f561fe66aafa056') in 0.061934 seconds 
+  Import took 0.066548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/Fox/Animations/Fox_Sit1.fbx
+  artifactKey: Guid(c59a20e486f80ba4e859d4ef9574f9bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Sit1.fbx using Guid(c59a20e486f80ba4e859d4ef9574f9bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11714c1e3da760115f4bebd6a5d272f') in 0.061758 seconds 
+  Import took 0.067114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Fox/Animations/Fox_Falling_Left.fbx
+  artifactKey: Guid(9eb4afe5321a98247a4a1b7f9e0e5ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Falling_Left.fbx using Guid(9eb4afe5321a98247a4a1b7f9e0e5ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c2991b5f8847d11165a9f4aba8e9cb0') in 0.063572 seconds 
+  Import took 0.067875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000830 seconds.
+  path: Assets/Fox/Materials/M_Fox.mat
+  artifactKey: Guid(4ad23863efbf001479d8ebd01ef00654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Materials/M_Fox.mat using Guid(4ad23863efbf001479d8ebd01ef00654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98649ccb8aa50a288f30a3a8c760cc84') in 0.048447 seconds 
+  Import took 0.054125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000475 seconds.
+  path: Assets/Fox/Animations/Fox_Falling.fbx
+  artifactKey: Guid(a07c42bf9096a064880415fc6125d716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Falling.fbx using Guid(a07c42bf9096a064880415fc6125d716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5924b3d982788d079cf58f04204a9b81') in 0.065981 seconds 
+  Import took 0.071927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Fox/Animations/Fox_Jump_InAir.fbx
+  artifactKey: Guid(e004cd5a03acf764d911027f6ca2b528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Jump_InAir.fbx using Guid(e004cd5a03acf764d911027f6ca2b528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed9daa98ca31d30bc9e331548b9f327') in 0.050440 seconds 
+  Import took 0.054785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001266 seconds.
+  path: Assets/Fox/Animations/Fox_Idle.fbx
+  artifactKey: Guid(09884bf878afb4549bea8fb4f77e5ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fox/Animations/Fox_Idle.fbx using Guid(09884bf878afb4549bea8fb4f77e5ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0870b26df92433d4d58f866002ec9cfe') in 0.065413 seconds 
+  Import took 0.071777 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
