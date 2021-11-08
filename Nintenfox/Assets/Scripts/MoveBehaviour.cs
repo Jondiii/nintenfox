@@ -17,24 +17,14 @@ public class MoveBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            Move(1);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            Move(-1);
-        }
-
         if (Input.GetKey(KeyCode.A))
         {
-            Rotate(-1);
+            MoveSideways(-1);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            Rotate(1);
+            MoveSideways(1);
         }
     }
 
@@ -47,6 +37,24 @@ public class MoveBehaviour : MonoBehaviour
     {
         Vector3 rotation = Vector3.up * rotateSpeed * value * Time.deltaTime;
         playerRigidbody.MoveRotation(Quaternion.Euler(transform.localRotation.eulerAngles + Vector3.up * rotateSpeed * value * Time.deltaTime));
+    }
+
+    private void MoveSideways(float value)
+    {
+        playerRigidbody.MovePosition(transform.position + transform.right * moveSpeed * Time.deltaTime * value);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            //GroundGenerator.instance.gameOver = true;
+        }
+        
+        if (collision.gameObject.tag == "Coin")
+        {
+            GroundGenerator.instance.score += 1;
+        }
     }
 
 }

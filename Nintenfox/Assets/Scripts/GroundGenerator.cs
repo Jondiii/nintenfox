@@ -17,7 +17,7 @@ public class GroundGenerator : MonoBehaviour
     [HideInInspector]
     public bool gameOver = false;
     static bool gameStarted = false;
-    float score = 0;
+    public float score = 0;
 
     public static GroundGenerator instance;
 
@@ -56,7 +56,6 @@ public class GroundGenerator : MonoBehaviour
         if (!gameOver && gameStarted)
         {
             transform.Translate(-spawnedTiles[0].transform.forward * Time.deltaTime * (movingSpeed + (score / 500)), Space.World);
-            score += Time.deltaTime * movingSpeed;
         }
 
         if (mainCamera.WorldToViewportPoint(spawnedTiles[0].endPoint.position).z < 0)
