@@ -3,12 +3,12 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 Nintenfox/Library/
-Nintenfox/Library//Temp/
-Nintenfox/Library//Obj/
-Nintenfox/Library//Build/
-Nintenfox/Library//Builds/
-Nintenfox/Library//Logs/
-Nintenfox/Library//MemoryCaptures/
+Nintenfox/Temp/
+Nintenfox/Obj/
+Nintenfox/Build/
+Nintenfox/Builds/
+Nintenfox/Logs/
+Nintenfox/MemoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
