@@ -46,9 +46,9 @@ public class ManchaSpawner : MonoBehaviour
                 Debug.Log("Total manchas: " + currentDirtBall);
                 dirtBalls[i].SetActive(true);
                 var go = Instantiate<GameObject>(dirtBalls[i]);
-                float x = Random.Range(fox.transform.position.x - 0.5f, fox.transform.position.x + 0.5f);
-                float y = Random.Range(fox.transform.position.y, fox.transform.position.y + 1.5f);
-                float z = Random.Range(fox.transform.position.z - 0.5f, fox.transform.position.z + 0.5f);
+                float x = Random.Range(fox.transform.position.x - 0.05f, fox.transform.position.x + 0.05f);
+                float y = Random.Range(fox.transform.position.y, fox.transform.position.y + 0.15f);
+                float z = Random.Range(fox.transform.position.z - 0.05f, fox.transform.position.z + 0.05f);
 
                 go.transform.position = new Vector3(x, y, z);
 

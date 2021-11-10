@@ -14,7 +14,7 @@ public class MovimientoEsponja : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             //este 1 me llo desplaza tantas veces como hay en el siguiente codigo
-            bool didHit = Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, 1 << LayerMask.NameToLayer("MovementPlane"));
+            bool didHit = Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, 1 << LayerMask.NameToLayer("MovementClean"));
 
             //La esponja se mueve al punto donde se a clicado con el raton
             if (didHit)

@@ -29,6 +29,6 @@ public class AppLogic : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("SampleScene"); //Podemoss poner el nombre de la escena o su ú‹dice (el orden en el que la hemos añadido al build settings
+        SceneManager.LoadScene("MenuPrincipal"); //Podemoss poner el nombre de la escena o su ú‹dice (el orden en el que la hemos añadido al build settings
     }
 }

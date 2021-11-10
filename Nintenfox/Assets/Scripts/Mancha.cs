@@ -13,11 +13,11 @@ public class Mancha : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Colision entre avion y mancha1");
+        Debug.Log("Colision entre zorro y mancha");
 
-        if (collision.gameObject.tag == "Cepillo")
+        if (collision.gameObject.tag == "Limpiar")
         {
-            Debug.Log("Colision entre avion y mancha2");
+            Debug.Log("Colision entre zorro y mancha2");
             Destroy(gameObject.GetComponent<Renderer>());
             Destroy(gameObject.GetComponent<Collider>());
             audioSource.Play();
