@@ -11,13 +11,13 @@ Nintenfox/[Ll]ogs/
 Nintenfox/[Uu]ser[Ss]ettings/
 Nintenfox/[Mm]emoryCaptures/
 # Nintenfox/Assets/Editor/Vuforia/
-*.VuforiaConfiguration.asset
-*.VuforiaConfiguration.asset.meta
+#*.VuforiaConfiguration.asset
+#*.VuforiaConfiguration.asset.meta
 # Nintenfox/Assets/StreamingAssets/
-*.AddVuforiaEnginePackage.cs
-*.AddVuforiaEnginePackage.cs.meta
-*.Vuforia.meta
-*.com.ptc.vuforia.engine-10.1.4.tgz
+#*.AddVuforiaEnginePackage.cs
+#*.AddVuforiaEnginePackage.cs.meta
+#*.Vuforia.meta
+#*.com.ptc.vuforia.engine-10.1.4.tgz
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

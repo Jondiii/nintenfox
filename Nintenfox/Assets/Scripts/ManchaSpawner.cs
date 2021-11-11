@@ -24,9 +24,10 @@ public class ManchaSpawner : MonoBehaviour
             playerRigibody = GetComponent<Rigidbody>();
         }
     }
-
     private void Update()
     {
+        //OnDisable(fox);
+        //  OnEnable(fox);
         if (currentDirtBall > dirtBalls.Length * 10)
         {
             // Ya se han activado todas las bolitas de suciedad
@@ -58,4 +59,7 @@ public class ManchaSpawner : MonoBehaviour
             }
         }
     }
+
+
+
 }
