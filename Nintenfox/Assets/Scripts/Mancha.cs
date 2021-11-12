@@ -13,7 +13,7 @@ public class Mancha : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Colision entre zorro y mancha");
+        //Debug.Log("Colision entre zorro y mancha");
 
         if (collision.gameObject.tag == "Limpiar")
         {

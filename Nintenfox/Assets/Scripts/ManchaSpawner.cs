@@ -9,6 +9,8 @@ public class ManchaSpawner : MonoBehaviour
 
     public GameObject fox;
 
+    
+
     int currentDirtBall = 0;
 
     private float elapsedTime;
@@ -26,8 +28,6 @@ public class ManchaSpawner : MonoBehaviour
     }
     private void Update()
     {
-        //OnDisable(fox);
-        //  OnEnable(fox);
         if (currentDirtBall > dirtBalls.Length * 10)
         {
             // Ya se han activado todas las bolitas de suciedad
@@ -52,6 +52,7 @@ public class ManchaSpawner : MonoBehaviour
                 float z = Random.Range(fox.transform.position.z - 0.05f, fox.transform.position.z + 0.05f);
 
                 go.transform.position = new Vector3(x, y, z);
+                go.transform.SetParent(fox.transform);
 
                 // Restamos un segundo
                 currentDirtBall++;
@@ -60,6 +61,8 @@ public class ManchaSpawner : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
 
-
+    }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Limpiar
+  - Fox
   layers:
   - Default
   - TransparentFX

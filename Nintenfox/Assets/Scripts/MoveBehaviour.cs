@@ -26,6 +26,26 @@ public class MoveBehaviour : MonoBehaviour
         {
             MoveSideways(1);
         }
+
+        if (Input.GetKey(KeyCode.PageUp))
+        {
+            Move(1);
+        }
+
+        if (Input.GetKey(KeyCode.PageDown))
+        {
+            Move(-1);
+        }
+
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            Rotate(-1);
+        }
+
+        if (Input.GetKey(KeyCode.RightAlt))
+        {
+            Rotate(1);
+        }
     }
 
     private void Move(float value)
