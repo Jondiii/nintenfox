@@ -9,13 +9,12 @@ public class ManchaSpawner : MonoBehaviour
 
     public GameObject fox;
 
-    
-
     int currentDirtBall = 0;
 
     private float elapsedTime;
 
     private Rigidbody playerRigibody;
+
 
     private void Awake()
     {
@@ -59,6 +58,13 @@ public class ManchaSpawner : MonoBehaviour
                 elapsedTime--;
             }
         }
+    }
+
+    public void ManchaEliminada()
+    {
+        currentDirtBall--;
+        Debug.Log("Mancha Limpiada");
+        Debug.Log("Total manchas: " + currentDirtBall);
     }
 
     private void OnEnable()

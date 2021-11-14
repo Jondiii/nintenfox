@@ -6,9 +6,12 @@ public class Mancha : MonoBehaviour
 {
     private AudioSource audioSource;
 
+    private ManchaSpawner manchaSpawer;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        manchaSpawer = GetComponent<ManchaSpawner>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -22,6 +25,7 @@ public class Mancha : MonoBehaviour
             Destroy(gameObject.GetComponent<Collider>());
             audioSource.Play();
             Destroy(gameObject, 1);
+            //manchaSpawer.ManchaEliminada();
         }
     }
 }
