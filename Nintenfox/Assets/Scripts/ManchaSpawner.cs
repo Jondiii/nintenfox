@@ -27,11 +27,11 @@ public class ManchaSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (currentDirtBall > dirtBalls.Length * 10)
+        if (currentDirtBall > dirtBalls.Length * 10 && dirtBalls.Length < 100)
         {
             // Ya se han activado todas las bolitas de suciedad
             Debug.Log("El lobo esta muy sucio");
-            currentDirtBall = 0;
+            //currentDirtBall = 0;
             return;
         }
 
