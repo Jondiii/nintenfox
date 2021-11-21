@@ -10,7 +10,7 @@ Nintenfox/[Bb]uilds/
 Nintenfox/[Ll]ogs/
 Nintenfox/[Uu]ser[Ss]ettings/
 Nintenfox/[Mm]emoryCaptures/
-Nintenfox/Assets/Editor/Vuforia/ImageTargetTextures/NintenFox
+Nintenfox/Assets/Editor/Vuforia/ImageTargetTextures/NintenFox/*
 #*.VuforiaConfiguration.asset
 #*.VuforiaConfiguration.asset.meta
 # Nintenfox/Assets/StreamingAssets/
