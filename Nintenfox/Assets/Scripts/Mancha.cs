@@ -25,7 +25,7 @@ public class Mancha : MonoBehaviour
             Destroy(gameObject.GetComponent<Collider>());
             audioSource.Play();
             Destroy(gameObject, 1);
-            //manchaSpawer.ManchaEliminada();
+            manchaSpawer.ManchaEliminada(collision.gameObject);
         }
     }
 }

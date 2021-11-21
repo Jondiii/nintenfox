@@ -60,7 +60,7 @@ public class ManchaSpawner : MonoBehaviour
         }
     }
 
-    public void ManchaEliminada()
+    public void ManchaEliminada(GameObject dirtBalls)
     {
         currentDirtBall--;
         Debug.Log("Mancha Limpiada");
