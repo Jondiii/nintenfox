@@ -60,7 +60,7 @@ public class ManchaSpawner : MonoBehaviour
         }
     }
 
-    public void ManchaEliminada(GameObject dirtBalls)
+    public void ManchaEliminada()
     {
         currentDirtBall--;
         Debug.Log("Mancha Limpiada");
@@ -69,6 +69,6 @@ public class ManchaSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-
+        //Este metodo sirve para cuando el lobo se crea, pero este esta creaddo desde el inicio del jeugo, lo unico que esta oculto
     }
 }
