@@ -21,6 +21,7 @@ public class GroundGenerator : MonoBehaviour
 
     public static GroundGenerator instance;
 
+    public int fontSize = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +90,8 @@ public class GroundGenerator : MonoBehaviour
 
     void OnGUI()
     {
+        GUI.skin.label.fontSize = fontSize;
+
         if (gameOver)
         {
             GUI.color = Color.red;
@@ -105,6 +108,6 @@ public class GroundGenerator : MonoBehaviour
 
 
         GUI.color = Color.green;
-        GUI.Label(new Rect(5, 5, 200, 25), "Score: " + ((int)score));
+        GUI.Label(new Rect(5, 5, 200000, 25000), "Score: " + ((int)score));
     }
 }
