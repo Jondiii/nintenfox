@@ -94,7 +94,7 @@ public class MoveBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Finish")
         {
-            //GroundGenerator.instance.gameOver = true;
+            GroundGenerator.instance.gameOver = true;
         }
         
         if (collision.gameObject.tag == "Coin")

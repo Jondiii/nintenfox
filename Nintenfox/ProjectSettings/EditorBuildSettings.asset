@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: e8947cb4e6b8d9d41a56ed86c6dbf3a8
   - enabled: 1
-    path: Assets/Scenes/Limpieza.unity
-    guid: 1c46d7067561b9741aaae5932afaa764
-  - enabled: 1
     path: Assets/Scenes/Minigame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

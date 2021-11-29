@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class GroundGenerator : MonoBehaviour
 {
     public Camera mainCamera;
@@ -11,9 +10,10 @@ public class GroundGenerator : MonoBehaviour
     public float movingSpeed = 12;
     public int tilesToPreSpawn = 15; //How many tiles should be pre-spawned
     public int tilesWithoutObstacles = 3; //How many tiles at the beginning should not have obstacles, good for warm-up
+    public MyGameManager gameManager;
 
     List<PlatformTile> spawnedTiles = new List<PlatformTile>();
-    int nextTileToActivate = -1;
+
     [HideInInspector]
     public bool gameOver = false;
     static bool gameStarted = false;
@@ -75,9 +75,11 @@ public class GroundGenerator : MonoBehaviour
             {
                 if (gameOver)
                 {
-                    //Restart current scene
-                    Scene scene = SceneManager.GetActiveScene();
-                    SceneManager.LoadScene(scene.name);
+                    gameManager.player.nMonedas = gameManager.player.nMonedas + score;
+                    gameManager.SaveGame();
+                    Debug.Log("Ahora tienes " + gameManager.player.nMonedas + " monedas");
+                    //Ir a la escena de RA
+                    SceneManager.LoadScene(1);
                 }
                 else
                 {
@@ -94,19 +96,18 @@ public class GroundGenerator : MonoBehaviour
 
         if (gameOver)
         {
-            GUI.color = Color.red;
-            GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200), "Game Over\nYour score is: " + ((int)score) + "\nPress 'Space' to restart");
+            GUI.color = Color.black;
+            GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200), "Game Over\nYour score is: "
+                + ((int)score) + "\nPress 'Space' to end the minigame.");
         }
         else
         {
             if (!gameStarted)
             {
-                GUI.color = Color.red;
+                GUI.color = Color.black;
                 GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200), "Press 'Space' to start");
             }
         }
-
-
         GUI.color = Color.green;
         GUI.Label(new Rect(5, 5, 200000, 25000), "Score: " + ((int)score));
     }

@@ -8,10 +8,15 @@ public class UpdateUI : MonoBehaviour
     public Slider foodSlider;
     public Slider cleaninessSlider;
     public Text coinText;
-    public int nCoins;
+    public MyGameManager gameManager;
+
+    int nCoins;
 
     private void Awake()
     {
+        nCoins = ((int)gameManager.player.nMonedas);
+        foodSlider.value = gameManager.player.energia;
+        cleaninessSlider.value = gameManager.player.limpieza;
         coinText.text = nCoins.ToString();
     }
 
