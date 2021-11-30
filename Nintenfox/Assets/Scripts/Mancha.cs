@@ -11,7 +11,7 @@ public class Mancha : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        manchaSpawner = GetComponent<ManchaSpawner>();
+        manchaSpawner = gameObject.AddComponent<ManchaSpawner>();
         //Debug.Log("################## mancha Tamaño: " + manchaSpawner.dirtBalls.Length);
     }
 
@@ -27,7 +27,7 @@ public class Mancha : MonoBehaviour
             audioSource.Play();
             Destroy(gameObject, 1);
             //Debug.Log("Total manchas: " + manchaSpawner.dirtBalls.Length);
-            //manchaSpawer.ManchaEliminada();
+            manchaSpawner.ManchaEliminada();
         }
     }
 }

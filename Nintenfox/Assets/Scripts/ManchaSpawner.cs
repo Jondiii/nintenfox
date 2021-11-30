@@ -9,12 +9,13 @@ public class ManchaSpawner : MonoBehaviour
 
     public GameObject fox;
 
-    int currentDirtBall = 0;
+    float currentDirtBall = 0;
 
     private float elapsedTime;
 
     private Rigidbody playerRigibody;
 
+    public MyGameManager gameManager;
 
     private void Awake()
     {
@@ -44,6 +45,8 @@ public class ManchaSpawner : MonoBehaviour
             {
                 Debug.Log("Aparecio una mancha");
                 Debug.Log("Total manchas: " + currentDirtBall);
+                gameManager.player.limpieza = currentDirtBall;
+                Debug.Log("Ahora tienes " + gameManager.player.limpieza + " manchas");
                 dirtBalls[i].SetActive(true);
                 var go = Instantiate<GameObject>(dirtBalls[i]);
                 float x = Random.Range(fox.transform.position.x - 0.05f, fox.transform.position.x + 0.05f);
@@ -65,10 +68,7 @@ public class ManchaSpawner : MonoBehaviour
         currentDirtBall--;
         Debug.Log("Mancha Limpiada");
         Debug.Log("Total manchas: " + currentDirtBall);
-    }
-
-    private void OnEnable()
-    {
-        //Este metodo sirve para cuando el lobo se crea, pero este esta creaddo desde el inicio del jeugo, lo unico que esta oculto
+        gameManager.player.limpieza = currentDirtBall;
+        Debug.Log("Ahora tienes " + gameManager.player.limpieza + " manchas");
     }
 }
