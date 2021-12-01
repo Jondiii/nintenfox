@@ -20,7 +20,7 @@ public class ManchaSpawner : MonoBehaviour
     private void Awake()
     {
         // Hacer que al principio estén todas las manchas desactivadas
-        for (int i = 0; i < dirtBalls.Length; i++)
+        for (int i = 0; i < dirtBalls.Length; i++)          //salta fallo
         {
             dirtBalls[i].SetActive(false);
             playerRigibody = GetComponent<Rigidbody>();
@@ -55,12 +55,20 @@ public class ManchaSpawner : MonoBehaviour
 
                 go.transform.position = new Vector3(x, y, z);
                 go.transform.SetParent(fox.transform);
-
-                // Restamos un segundo
+                //Evento
+                var mancha = go.GetComponent<Mancha>();
+                mancha.OnCleaner += Mancha_OnCleaner;
+                
                 currentDirtBall++;
+                // Restamos un segundo
                 elapsedTime--;
             }
         }
+    }
+
+    private void Mancha_OnCleaner()
+    {
+        ManchaEliminada();
     }
 
     public void ManchaEliminada()
