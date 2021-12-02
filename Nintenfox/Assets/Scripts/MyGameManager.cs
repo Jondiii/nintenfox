@@ -22,7 +22,7 @@ public class MyGameManager : MonoBehaviour
         } else
         {
             player.energia = 100;
-            player.limpieza = 100;
+            player.limpieza = 0;
             player.nMonedas = 0;
         }
     }

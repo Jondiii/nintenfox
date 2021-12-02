@@ -20,7 +20,7 @@ public class ManchaSpawner : MonoBehaviour
     private void Awake()
     {
         // Hacer que al principio estén todas las manchas desactivadas
-        for (int i = 0; i < dirtBalls.Length; i++)          //salta fallo
+        for (int i = 0; i < dirtBalls.Length; i++)         
         {
             dirtBalls[i].SetActive(false);
             playerRigibody = GetComponent<Rigidbody>();
@@ -28,7 +28,7 @@ public class ManchaSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (currentDirtBall > dirtBalls.Length * 10 && dirtBalls.Length < 100)
+        if (currentDirtBall > 99 && dirtBalls.Length < 100)
         {
             // Ya se han activado todas las bolitas de suciedad
             Debug.Log("El lobo esta muy sucio");
