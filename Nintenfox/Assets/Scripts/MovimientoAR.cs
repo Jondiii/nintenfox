@@ -2,45 +2,68 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoAR : MonoBehaviour
+public class MovimientoAR:MonoBehaviour
 {
-    private Rigidbody playerRigidbody;
     private int prov;
-    private bool inMove = true;
+    private bool inMove = false;
+    private bool busy = false;
     private Animator animController;
+    private string tipo = "stop";
 
     public float moveSpeed;
     public Transform target;
     public Vector3 velocity = Vector3.zero;
+    public Transform shop;
     
+
 
     // Update is called once per frame
     void Awake()
     {
         animController = GetComponent<Animator>();
         InvokeRepeating("movementChooser", 1, 2);
+        
     }
-    
+
     void Update()
     {
-        if (inMove == true) {
-            animController.SetBool("Moving", true);
-            transform.position = Vector3.SmoothDamp(transform.position, target.position, ref velocity, moveSpeed * Time.deltaTime);
-            transform.LookAt(target);
+        switch (tipo)
+        {
+            case "random":
+                animController.SetBool("Moving", true);
+                transform.position = Vector3.SmoothDamp(transform.position, target.position, ref velocity, moveSpeed * Time.deltaTime);
+                transform.LookAt(target);
+                transform.localRotation = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y, 0f);
 
-            Debug.Log(Vector3.Distance(transform.position, target.position));
-            if ( 2f > Vector3.Distance(transform.position, target.position))
-            {
-                inMove = false;
-                animController.SetBool("Moving", false);
-            }
+                // Debug.Log(Vector3.Distance(transform.position, target.position));
+                if (0.2f > Vector3.Distance(transform.position, target.position))
+                {
+                    tipo = "stop";
+                    animController.SetBool("Moving", false);
+                }
+            break;
+
+            case "tienda":
+                animController.SetBool("Moving", true);
+                transform.position = Vector3.SmoothDamp(transform.position, shop.position, ref velocity, moveSpeed * Time.deltaTime);
+                transform.LookAt(shop);
+                transform.localRotation = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y, 0f);
+               
+                if (0.2f > Vector3.Distance(transform.position, shop.position))
+                {
+                    tipo = "stop";
+                    animController.SetBool("Moving", false);
+                }
+
+            break;
         }
-       
+        
+        
     }
 
     void movementChooser() 
     {
-        if (inMove == false)
+        if (tipo == "stop")
         {
             prov = Random.Range(0 , 100);
             Debug.Log("prov:" + prov);
@@ -48,11 +71,18 @@ public class MovimientoAR : MonoBehaviour
             if (prov > 80)
             {
                 Debug.Log("Entro");
-
-                target.position = new Vector3(Random.Range(-10.0f, 10.0f), 0, Random.Range(-10.0f, 10.0f));
-                inMove = true;
+                
+                target.localPosition = new Vector3(Random.Range(-2f, 2f),0 , Random.Range(-2f, 2f));
+                Debug.Log(target.position);
+                transform.LookAt(target);
+                tipo = "random";
             }
         }
     }
-    
+
+    public void goToCard()
+    {
+        tipo = "tienda";
+    }
+
 }
