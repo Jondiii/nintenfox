@@ -12,13 +12,15 @@ public class UpdateUI : MonoBehaviour
 
     int nCoins;
 
-    private void Awake()
+    private void Start()
     {
         nCoins = ((int)gameManager.player.nMonedas);
         foodSlider.value = gameManager.player.energia;
         cleaninessSlider.value = gameManager.player.limpieza;
         coinText.text = nCoins.ToString();
     }
+
+ 
 
     public void UpdateFood(int cuantity)
     {
