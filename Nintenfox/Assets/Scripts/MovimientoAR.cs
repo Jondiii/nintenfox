@@ -14,7 +14,9 @@ public class MovimientoAR:MonoBehaviour
     public Transform target;
     public Vector3 velocity = Vector3.zero;
     public Transform shop;
-    
+    public Transform food;
+    public Transform food2;
+
 
 
     // Update is called once per frame
@@ -56,6 +58,23 @@ public class MovimientoAR:MonoBehaviour
                 }
 
             break;
+            case "comida":
+                //cambiar esto
+                animController.SetBool("Moving", true);
+                transform.position = Vector3.SmoothDamp(transform.position, food.position, ref velocity, moveSpeed * Time.deltaTime);
+                transform.LookAt(food);
+                transform.localRotation = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y, 0f);
+                transform.LookAt(food2);
+                if (0.2f > Vector3.Distance(transform.position, food.position))
+                {
+                    tipo = "stop";
+                    //animController.SetBool("Moving", false);
+                    Debug.Log("HE LLEGADO AL OBJETIVO");
+                    //animController.SetBool("Eating", true);
+                 
+                }
+
+                break;
         }
         
         
@@ -83,6 +102,11 @@ public class MovimientoAR:MonoBehaviour
     public void goToCard()
     {
         tipo = "tienda";
+    }
+
+    public void goToCard2()
+    {
+        tipo = "comida";
     }
 
 }
