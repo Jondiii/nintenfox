@@ -22,7 +22,7 @@ public class UpdateUI : MonoBehaviour
 
  
 
-    public void UpdateFood(int cuantity)
+    public void UpdateFood(float cuantity)
     {
         if (foodSlider.value + cuantity < 100 && foodSlider.value + cuantity > 0)
         {
@@ -34,11 +34,11 @@ public class UpdateUI : MonoBehaviour
         }
     }
 
-    public void UpdateCleaniness(int cuantity)
+    public void UpdateCleaniness(float cuantity)
     {
-        if (cleaninessSlider.value + cuantity < 100 && cleaninessSlider.value + cuantity > 0)
+        if (cleaninessSlider.value < 100 && cleaninessSlider.value >= 0)
         {
-            cleaninessSlider.value += cuantity;
+            cleaninessSlider.value = cuantity;
             Debug.Log("Nuevo valor de la barra de limpieza: " + cleaninessSlider.value);
         } else
         {
