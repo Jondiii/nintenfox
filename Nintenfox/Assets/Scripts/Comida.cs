@@ -5,26 +5,30 @@ using UnityEngine;
 public class Comida : MonoBehaviour
 {
     private AudioSource audioSource;
+    //public MyGameManager gameManager;
+    //public UpdateUI updateUI;
+    //float hambre = 0;
+    public GameObject zorro;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void onEnable()
+    private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("ESTA LA MANZANA EN ESCENA");
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Fox")
+        //Acciones a realizar cuando se detecta una entrada al Trigger.
+        if (collider.gameObject.name == "Fox")
         {
-            Debug.Log("COLISION ENTRE ZORRO Y COMIDA");
+            //cuando llegue que espere
+            //lanzar la animación 
+            Debug.Log("EL ZORRO HA TOCADO LA COMIDA");
             Destroy(gameObject.GetComponent<Renderer>());
             Destroy(gameObject.GetComponent<Collider>());
             audioSource.Play();
             Destroy(gameObject, 1);
+            //gameManager.player.energia = hambre;
+            //updateUI.UpdateFood(gameManager.player.energia);
         }
     }
 

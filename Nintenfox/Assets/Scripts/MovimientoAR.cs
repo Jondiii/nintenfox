@@ -29,6 +29,7 @@ public class MovimientoAR:MonoBehaviour
 
     void Update()
     {
+        Debug.Log("pata");
         switch (tipo)
         {
             case "random":
@@ -58,6 +59,7 @@ public class MovimientoAR:MonoBehaviour
                 }
 
             break;
+            
             case "comida":
                 //cambiar esto
                 animController.SetBool("Moving", true);
@@ -67,14 +69,16 @@ public class MovimientoAR:MonoBehaviour
                 transform.LookAt(food2);
                 if (0.2f > Vector3.Distance(transform.position, food.position))
                 {
-                    tipo = "stop";
-                    //animController.SetBool("Moving", false);
+                    
+                    animController.SetBool("Moving", false);
                     Debug.Log("HE LLEGADO AL OBJETIVO");
-                    //animController.SetBool("Eating", true);
-                 
+                    animController.SetBool("Eating", true);
+                    tipo = "stop";
+
                 }
 
                 break;
+                
         }
         
         
