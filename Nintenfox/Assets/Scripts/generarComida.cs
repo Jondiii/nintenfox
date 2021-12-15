@@ -14,6 +14,17 @@ public class generarComida : MonoBehaviour
             manz.transform.parent = transform;
             manz.transform.localPosition = new Vector3(0, 0.15f, 0);
         }
+        else
+        {
+            transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+        }
         
     }
+
+    public void loss()
+    {
+        transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+    }
+  
+
 }

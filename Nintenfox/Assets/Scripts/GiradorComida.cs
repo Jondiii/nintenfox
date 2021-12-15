@@ -38,7 +38,7 @@ public class GiradorComida : MonoBehaviour
 
                 hamburguesa.transform.position = Vector3.Lerp(hamburguesa.transform.position, manzanaTemp,  moveSpeed * Time.deltaTime);
                 //Debug.Log(Vector3.Distance(manzana.transform.position, jamonTemp));
-                if (0.001f > Vector3.Distance(manzana.transform.position, jamonTemp))
+                if (0.01f > Vector3.Distance(manzana.transform.position, jamonTemp))
                 {
                     
                     spining = false;
@@ -55,7 +55,7 @@ public class GiradorComida : MonoBehaviour
                 hamburguesa.transform.position = Vector3.Lerp(hamburguesa.transform.position, jamonTemp, moveSpeed * Time.deltaTime);
                 
                 //Debug.Log(Vector3.Distance(manzana.transform.position, hamburguesaTemp));
-                if (0.001f > Vector3.Distance(manzana.transform.position, hamburguesaTemp))
+                if (0.01f > Vector3.Distance(manzana.transform.position, hamburguesaTemp))
                 {
                     spining = false;
                 }

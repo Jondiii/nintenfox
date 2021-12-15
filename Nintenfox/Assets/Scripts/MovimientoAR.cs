@@ -15,7 +15,8 @@ public class MovimientoAR:MonoBehaviour
     public Vector3 velocity = Vector3.zero;
     public Transform shop;
     public Transform food;
-    public Transform food2;
+    public Transform portal;
+
 
 
 
@@ -29,7 +30,7 @@ public class MovimientoAR:MonoBehaviour
 
     void Update()
     {
-        Debug.Log("pata");
+    
         switch (tipo)
         {
             case "random":
@@ -57,8 +58,22 @@ public class MovimientoAR:MonoBehaviour
                     tipo = "stop";
                     animController.SetBool("Moving", false);
                 }
-
             break;
+
+            case "portal":
+                animController.SetBool("Moving", true);
+
+                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(portal.position.x, 0, portal.position.z), ref velocity, moveSpeed * Time.deltaTime);
+                transform.LookAt(portal);
+                transform.localRotation = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y, 0f);
+
+                if (0.6f > Vector3.Distance(transform.position, portal.position))
+                {
+                    tipo = "stop";
+                    animController.SetBool("Moving", false);
+                }
+
+                break;
             
             case "comida":
                 //cambiar esto
@@ -66,15 +81,23 @@ public class MovimientoAR:MonoBehaviour
                 transform.position = Vector3.SmoothDamp(transform.position, food.position, ref velocity, moveSpeed * Time.deltaTime);
                 transform.LookAt(food);
                 transform.localRotation = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y, 0f);
-                transform.LookAt(food2);
-                if (0.2f > Vector3.Distance(transform.position, food.position))
+                
+                Debug.Log(Vector3.Distance(transform.position, food.position));
+                if (2f > Vector3.Distance(transform.position, food.position))
                 {
-                    
                     animController.SetBool("Moving", false);
-                    Debug.Log("HE LLEGADO AL OBJETIVO");
                     animController.SetBool("Eating", true);
-                    tipo = "stop";
+                    
 
+                    if (0.2f > Vector3.Distance(transform.position, food.position))
+                    {
+
+                        
+                        Debug.Log("HE LLEGADO AL OBJETIVO");
+                        
+                        tipo = "stop";
+                        animController.SetBool("Eating", false);
+                    }
                 }
 
                 break;
@@ -89,14 +112,14 @@ public class MovimientoAR:MonoBehaviour
         if (tipo == "stop")
         {
             prov = Random.Range(0 , 100);
-            Debug.Log("prov:" + prov);
+            //Debug.Log("prov:" + prov);
         
             if (prov > 80)
             {
                 Debug.Log("Entro");
                 
                 target.localPosition = new Vector3(Random.Range(-2f, 2f),0 , Random.Range(-2f, 2f));
-                Debug.Log(target.position);
+                //Debug.Log(target.position);
                 transform.LookAt(target);
                 tipo = "random";
             }
@@ -111,6 +134,11 @@ public class MovimientoAR:MonoBehaviour
     public void goToCard2()
     {
         tipo = "comida";
+    }
+
+    public void goToPortal()
+    {
+        tipo = "portal";
     }
 
 }
