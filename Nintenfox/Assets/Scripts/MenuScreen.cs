@@ -9,10 +9,10 @@ public class MenuScreen : MonoBehaviour
 
     private void Awake()
     {
-        startButton.onClick.AddListener(OnClick);
+        startButton.onClick.AddListener(TaskOnClick);
     }
 
-    private void OnClick()
+    private void TaskOnClick()
     {
         AppLogic.Instance.LoadGame();
     }

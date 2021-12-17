@@ -20,7 +20,6 @@ public class MiradorPortal : MonoBehaviour
 
     public void looker()
     {
-        Debug.Log("patatap");
         mira = true;
     }
 }

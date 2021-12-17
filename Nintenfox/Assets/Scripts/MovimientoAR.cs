@@ -5,8 +5,6 @@ using UnityEngine;
 public class MovimientoAR:MonoBehaviour
 {
     private int prov;
-    private bool inMove = false;
-    private bool busy = false;
     private Animator animController;
     private string tipo = "stop";
 
@@ -77,7 +75,6 @@ public class MovimientoAR:MonoBehaviour
                 transform.LookAt(food);
                 transform.localRotation = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y, 0f);
                 
-                Debug.Log(Vector3.Distance(transform.position, food.position));
                 if (2f > Vector3.Distance(transform.position, food.position))
                 {
                     animController.SetBool("Moving", false);
@@ -88,7 +85,7 @@ public class MovimientoAR:MonoBehaviour
                     {
 
                         
-                        Debug.Log("HE LLEGADO AL OBJETIVO");
+                        Debug.Log("Ha llegado al objetivo");
                         
                         tipo = "stop";
                         animController.SetBool("Eating", false);
@@ -107,14 +104,12 @@ public class MovimientoAR:MonoBehaviour
         if (tipo == "stop")
         {
             prov = Random.Range(0 , 100);
-            //Debug.Log("prov:" + prov);
         
             if (prov > 80)
             {
                 Debug.Log("Entro");
                 
                 target.localPosition = new Vector3(Random.Range(-2f, 2f),0 , Random.Range(-2f, 2f));
-                //Debug.Log(target.position);
                 transform.LookAt(target);
                 tipo = "random";
             }

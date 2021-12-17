@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class SalirTienda : MonoBehaviour
 {
 	public Button yourButton;
-	void Start()
+	
+	void Awake()
 	{
 		Button btn = yourButton.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);

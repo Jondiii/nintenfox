@@ -7,6 +7,7 @@ public class UpdateUI : MonoBehaviour
 {
     public Slider foodSlider;
     public Slider cleaninessSlider;
+    public Button bSaveGame;
     public Text coinText;
     public MyGameManager gameManager;
 
@@ -18,13 +19,14 @@ public class UpdateUI : MonoBehaviour
         foodSlider.value = gameManager.player.energia;
         cleaninessSlider.value = gameManager.player.limpieza;
         coinText.text = nCoins.ToString();
+        bSaveGame.onClick.AddListener(SaveGame);
     }
 
  
 
     public void UpdateFood(float cuantity)
     {
-        if (foodSlider.value + cuantity < 100 && foodSlider.value + cuantity > 0)
+        if (foodSlider.value + cuantity <= 100 && foodSlider.value + cuantity >= 0)
         {
             foodSlider.value += cuantity;
             Debug.Log("Nuevo valor de la barra de comida: " + foodSlider.value);
@@ -57,6 +59,11 @@ public class UpdateUI : MonoBehaviour
         {
             Debug.Log("No se pueden tener menos de 0 monedas!");
         }
+    }
+
+    private void SaveGame()
+    {
+        gameManager.SaveGame();
     }
 
 }

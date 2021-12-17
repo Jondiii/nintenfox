@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ManchaSpawner : MonoBehaviour
 {
-    // Este atributo es p˙blico, desde la escena de Unity podrÈis arrastrar aquÌ las esferas de suciedad
+    // Este atributo es pulico, desde la escena de Unity podras arrastrar aquÅElas esferas de suciedad
     public GameObject[] dirtBalls;
 
     public GameObject fox;
@@ -23,7 +23,7 @@ public class ManchaSpawner : MonoBehaviour
 
     private void Awake()
     {
-        // Hacer que al principio estÈn todas las manchas desactivadas
+        // Hacer que al principio esten todas las manchas desactivadas
         for (int i = 0; i < dirtBalls.Length; i++)         
         {
             dirtBalls[i].SetActive(false);
@@ -88,26 +88,12 @@ public class ManchaSpawner : MonoBehaviour
     void OnGUI()
     {
         GUI.skin.label.fontSize = fontSize;
-        //if (currentDirtBall >= 50 && currentDirtBall < 80)
-        //{
-        //    GUI.color = Color.yellow;
-        //}
-        //else
-        //{
+
         GUI.color = Color.blue;
-        //if (currentDirtBall >= 80)
-          //  {
-                //GUI.color = Color.red;
-                if (currentDirtBall == 100)
-                {
-                   GUI.Label(new Rect(450, 300, 200, 25), "El Zorro esta muy Sucio");
-                }
-            //}
-            //else
-            //{
-                
-            //}
-        //}
-        GUI.Label(new Rect(210, 25, 200, 25), ((int)currentDirtBall + "%")); 
+
+        if (currentDirtBall == 100)
+        {
+            GUI.Label(new Rect(450, 300, 200, 25), "El Zorro esta muy Sucio");
+        }
     }
 }

@@ -17,7 +17,7 @@ public class CambiadorJuego : MonoBehaviour
         if (other.gameObject.name == "Fox")
         {
             
-            if (gameManager.player.energia > 0)
+            if (gameManager.player.energia > 21)
             {
                 gameManager.player.energia = gameManager.player.energia - cantidad;
                 updateUI.UpdateFood(-cantidad);

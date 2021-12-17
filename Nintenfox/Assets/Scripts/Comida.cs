@@ -9,9 +9,7 @@ public class Comida : MonoBehaviour
     private UpdateUI updateUI;
     
     public GameObject soni;
-
-    
-    
+    public int energiaRecuperada;
 
     private void Awake()
     {
@@ -25,13 +23,18 @@ public class Comida : MonoBehaviour
         //Acciones a realizar cuando se detecta una entrada al Trigger.
         if (collider.gameObject.name == "Fox")
         {
-            Debug.Log("EL ZORRO HA TOCADO LA COMIDA");
+            if (!(gameManager.player.energia + energiaRecuperada > 100))
+            {
+                updateUI.UpdateFood(energiaRecuperada);
+                gameManager.player.energia = gameManager.player.energia + energiaRecuperada;
+                gameManager.SaveGame();
+                aud.Play();
+                gameObject.SetActive(false);
+            }
+            
+            Debug.Log("Ha llegado a la comida");
      
-            updateUI.UpdateFood(20);
-            gameManager.player.energia = gameManager.player.energia + 20;
-            gameManager.SaveGame();
-            aud.Play();
-            gameObject.SetActive(false);
+
         }
     }
 
