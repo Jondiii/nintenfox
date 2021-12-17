@@ -8,7 +8,7 @@ public class MyGameManager : MonoBehaviour
 
     public Player player;
     string savePath;
-    // Start is called before the first frame update
+
     void Awake()
     {
         savePath = Application.persistentDataPath + "/SaveData.json";

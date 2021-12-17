@@ -17,10 +17,6 @@ public class MovimientoAR:MonoBehaviour
     public Transform food;
     public Transform portal;
 
-
-
-
-    // Update is called once per frame
     void Awake()
     {
         animController = GetComponent<Animator>();
@@ -39,7 +35,6 @@ public class MovimientoAR:MonoBehaviour
                 transform.LookAt(target);
                 transform.localRotation = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y, 0f);
 
-                // Debug.Log(Vector3.Distance(transform.position, target.position));
                 if (0.2f > Vector3.Distance(transform.position, target.position))
                 {
                     tipo = "stop";

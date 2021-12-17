@@ -22,8 +22,7 @@ public class CambiadorJuego : MonoBehaviour
                 gameManager.player.energia = gameManager.player.energia - cantidad;
                 updateUI.UpdateFood(-cantidad);
                 gameManager.SaveGame();
-                //Debug.Log("RESTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-                //SceneManager.LoadScene(2);
+                SceneManager.LoadScene(2);
 
             }
                      

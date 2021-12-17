@@ -26,7 +26,6 @@ public class Mirador : MonoBehaviour
 
     public void looker()
     {
-        Debug.Log("patatap");
         mira = true;
         //transform.LookAt(zorro);
         //transform.localRotation = Quaternion.Euler(-180f, transform.localRotation.eulerAngles.y-180, 0f);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class generarComida : MonoBehaviour
 {
     public GameObject manzana;
-    // Start is called before the first frame update
+
     public void generar()
     {
         if (transform.childCount == 0)

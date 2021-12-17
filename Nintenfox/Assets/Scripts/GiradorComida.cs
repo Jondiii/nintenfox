@@ -16,13 +16,6 @@ public class GiradorComida : MonoBehaviour
     private string direction;
     public float moveSpeed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (spining == true)
@@ -30,14 +23,12 @@ public class GiradorComida : MonoBehaviour
             
             if (direction == "L")
             {
-                //Debug.Log("update");
 
                 manzana.transform.position = Vector3.Lerp(manzana.transform.position, jamonTemp,  moveSpeed * Time.deltaTime);
 
                 jamon.transform.position = Vector3.Lerp(jamon.transform.position, hamburguesaTemp, moveSpeed * Time.deltaTime);
 
                 hamburguesa.transform.position = Vector3.Lerp(hamburguesa.transform.position, manzanaTemp,  moveSpeed * Time.deltaTime);
-                //Debug.Log(Vector3.Distance(manzana.transform.position, jamonTemp));
                 if (0.01f > Vector3.Distance(manzana.transform.position, jamonTemp))
                 {
                     
@@ -54,7 +45,6 @@ public class GiradorComida : MonoBehaviour
 
                 hamburguesa.transform.position = Vector3.Lerp(hamburguesa.transform.position, jamonTemp, moveSpeed * Time.deltaTime);
                 
-                //Debug.Log(Vector3.Distance(manzana.transform.position, hamburguesaTemp));
                 if (0.01f > Vector3.Distance(manzana.transform.position, hamburguesaTemp))
                 {
                     spining = false;

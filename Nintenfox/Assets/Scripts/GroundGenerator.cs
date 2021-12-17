@@ -22,7 +22,7 @@ public class GroundGenerator : MonoBehaviour
     public static GroundGenerator instance;
 
     public int fontSize = 20;
-    // Start is called before the first frame update
+
     void Start()
     {
         instance = this;
