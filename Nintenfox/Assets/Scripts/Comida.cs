@@ -5,13 +5,18 @@ using UnityEngine;
 public class Comida : MonoBehaviour
 {
     private AudioSource aud;
-    //public MyGameManager gameManager;
-    //public UpdateUI updateUI;
-    //float hambre = 0;
+    private MyGameManager gameManager;
+    private UpdateUI updateUI;
+    
     public GameObject soni;
+
+    
+    
 
     private void Awake()
     {
+        gameManager = Object.FindObjectOfType<MyGameManager>();
+        updateUI = Object.FindObjectOfType<UpdateUI>();
         aud = soni.GetComponent<AudioSource>();
     }
 
@@ -25,8 +30,14 @@ public class Comida : MonoBehaviour
             Debug.Log("EL ZORRO HA TOCADO LA COMIDA");
             //Destroy(gameObject.GetComponent<Renderer>());
             //Destroy(gameObject.GetComponent<Collider>());
+
+            
+            updateUI.UpdateFood(20);
+            gameManager.player.energia = gameManager.player.energia + 20;
+            gameManager.SaveGame();
             aud.Play();
             gameObject.SetActive(false);
+            
             //Destroy(this.gameObject, 1);
             //gameManager.player.energia = hambre;
             //updateUI.UpdateFood(gameManager.player.energia);
