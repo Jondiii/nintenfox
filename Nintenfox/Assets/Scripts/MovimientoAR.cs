@@ -71,7 +71,6 @@ public class MovimientoAR:MonoBehaviour
                 break;
             
             case "comida":
-                //cambiar esto
                 animController.SetBool("Moving", true);
                 transform.position = Vector3.SmoothDamp(transform.position, food.position, ref velocity, moveSpeed * Time.deltaTime);
                 transform.LookAt(food);
